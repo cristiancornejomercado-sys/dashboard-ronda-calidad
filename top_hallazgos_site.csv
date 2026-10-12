@@ -1,0 +1,54 @@
+﻿Site;Área;Pregunta;Cantidad
+Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;5
+Cochabamba;Picking;¿Los productos están limpios, sin presencia de polvo?;2
+Montero;Picking;¿El piso del área de Picking está limpio y sin basura?;3
+Montero;Picking;¿Los productos están limpios, sin presencia de polvo?;2
+Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;3
+Cobija;Picking;¿Los pallets están en las áreas demarcadas?;3
+Cochabamba;Picking;¿Los pallets están en las áreas demarcadas?;2
+Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;3
+Montero;Reempaque;¿El área de reempaque es accesible únicamente para personal autorizado?;2
+Montero;Reempaque;¿El área de reempaque es accesible únicamente para personal autorizado?;2
+Cobija;Picking;¿Los pallets están en las áreas demarcadas?;3
+Cochabamba;Picking;¿Los pallets están en las áreas demarcadas?;2
+Cochabamba;Picking;¿Los productos están limpios, sin presencia de polvo?;2
+Cochabamba;Reempaque;¿Los productos están organizados en las áreas demarcadas?;1
+Montero;Picking;¿Los pallets de madera están en buenas condiciones (sin roturas) en el Picking?;1
+Montero;Estiba;¿Todos los pallets están alineados y sin inclinación?;1
+El Alto;Picking;¿Los productos están sin film stretch?;1
+Trinidad;Picking;¿Los productos están limpios, sin presencia de polvo?;1
+Trinidad;Reempaque;¿Los productos están organizados en las áreas demarcadas?;1
+Oruro;Picking;¿Los pallets están en las áreas demarcadas?;2
+Oruro;Estiba;¿El piso del almacén está limpio y sin basura?;2
+Oruro;Estiba;¿Los productos están limpios, sin presencia de polvo?;1
+Oruro;Reempaque;¿El área de reempaque está libre de tijeras, cuchillos o herramientas inadecuadas para el corte?;1
+Tarija;Picking;¿Los pallets de madera están en buenas condiciones (sin roturas) en el Picking?;1
+Tarija;Estiba;¿El piso del almacén está limpio y sin basura?;1
+Tarija;Estiba;¿Estan funcionando correctamente los termometros del almacen?;1
+Tarija;Reempaque;¿El área de clasificación está activa y no ingresan productos averiados al reempaque?;1
+Cobija;Picking;¿Los productos están limpios, sin presencia de polvo?;2
+Cobija;Reempaque;¿El área de reempaque es accesible únicamente para personal autorizado?;1
+Montero;Picking;¿Todos los productos están dentro de la fecha de vencimiento y del plazo comercial?;1
+Montero;Estiba;¿Los productos están limpios, sin presencia de polvo?;1
+Montero;Reempaque;¿El área de reempaque está limpia?;1
+Cochabamba;Reempaque;¿El área de reempaque está limpia?;1
+Sucre;Picking;¿Los productos están limpios, sin presencia de polvo?;1
+Riberalta;Picking;¿Los pallets están en las áreas demarcadas?;1
+Montero;Picking;¿Los pallets están en las áreas demarcadas?;2
+Cobija;Estiba;¿Los productos están limpios, sin presencia de polvo?;1
+Cobija;Reempaque;¿Los productos en la estantería respetan el límite de seguridad y las reglas de apilamiento?;1
+Riberalta;Reempaque;¿Los productos están organizados en las áreas demarcadas?;1
+Cochabamba;Estiba;Si aplica, ¿los envases retornables RGB están encajados y/o asegurados con zuncho o amarre?;1
+Oruro;Picking;¿Los pallets están en las áreas demarcadas?;2
+Oruro;Picking;¿Los pallets están libres de fugas, botellas rotas, microperforaciones o productos dañados?;1
+Oruro;Estiba;¿El piso del almacén está limpio y sin basura?;2
+Montero;Picking;¿El piso del área de Picking está limpio y sin basura?;3
+Montero;Picking;¿Los pallets están en las áreas demarcadas?;2
+Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;3
+Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;5
+Montero;Reempaque;¿El área de reempaque está libre de plagas y mosquitos?;1
+El Alto;Estiba;¿Todos los pallets están en las áreas demarcadas?;1
+Yacuiba;Picking;¿Los pallets están en las áreas demarcadas?;1
+Cobija;Picking;¿Los pallets están en las áreas demarcadas?;3
+Cobija;Picking;¿Los productos están limpios, sin presencia de polvo?;2
+Cobija;Estiba;¿Todos los pallets están en las áreas demarcadas?;1

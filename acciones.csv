@@ -1,0 +1,59 @@
+﻿Site;Área;Hallazgo;Acción;Estado
+Cochabamba;Picking;¿Los productos están limpios, sin presencia de polvo?;realizar 5s de zona picking en el cambio de turno ya que por el viento ingresó polvo a la zona picking;Pendiente
+Cochabamba;Reempaque;¿Los productos están organizados en las áreas demarcadas?;Falta pintar las paletas para diferenciar productos que se pueden reempacar y no se puede reempacar;Pendiente
+Montero;Picking;¿El piso del área de Picking está limpio y sin basura?;Realizar limpieza con Karcher;Pendiente
+Montero;Picking;¿Los productos están limpios, sin presencia de polvo?;Desempolvar productos con exceso de polvo;Pendiente
+Montero;Picking;¿Los pallets de madera están en buenas condiciones (sin roturas) en el Picking?;Cambiar pallet de Huari 300;Pendiente
+Montero;Estiba;¿Todos los pallets están alineados y sin inclinación?;Pallet de gaseosas ladeado;Pendiente
+Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;Gestion de alarma para aves;Pendiente
+El Alto;Picking;¿Los productos están sin film stretch?;deben de estar con film strech por que es su sujeccion no pomdemos sacar los films de las paletas ;Pendiente
+Montero;Picking;¿El piso del área de Picking está limpio y sin basura?;Limpiar pisos de picking fuertes vientos;Pendiente
+Montero;Picking;¿Los productos están limpios, sin presencia de polvo?;Desempolvar productos en picking ;Pendiente
+Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;Gestion de alarma para aves;Pendiente
+Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;Gestionar de alarma para aves ;Pendiente
+Trinidad;Picking;¿Los productos están limpios, sin presencia de polvo?;Refuerzo de uso de capuchones en estibas de picking;Pendiente
+Trinidad;Reempaque;¿Los productos están organizados en las áreas demarcadas?;Realizar traslado de productos reempacados a su respectiva estiba;Pendiente
+Oruro;Picking;¿Los pallets están en las áreas demarcadas?;Se habilitó un área para almacenar temporalmente por trabajos en picking;Pendiente
+Oruro;Estiba;¿El piso del almacén está limpio y sin basura?;Se notifico a operación;Cerrada
+Oruro;Estiba;¿Los productos están limpios, sin presencia de polvo?;Se notifico a operación;Cerrada
+Oruro;Reempaque;¿El área de reempaque está libre de tijeras, cuchillos o herramientas inadecuadas para el corte?;Se decomiso la tijera;Cerrada
+Tarija;Picking;¿Los pallets de madera están en buenas condiciones (sin roturas) en el Picking?;Realizar la segregación de paletas;Pendiente
+Tarija;Estiba;¿El piso del almacén está limpio y sin basura?;Reforzar 5s con el equipo de operacion;Pendiente
+Tarija;Estiba;¿Estan funcionando correctamente los termometros del almacen?;Cambio de pilas en termómetro de bodega 3;Pendiente
+Tarija;Reempaque;¿El área de clasificación está activa y no ingresan productos averiados al reempaque?;Se tiene productos dañados que ingresan a reempaque ;Pendiente
+Cobija;Picking;¿Los pallets están en las áreas demarcadas?;Asignar un sector para paletas y realizar la demarcación;Pendiente
+Cobija;Picking;¿Los productos están limpios, sin presencia de polvo?;Compra sopladora industrial;Pendiente
+Cobija;Reempaque;¿El área de reempaque es accesible únicamente para personal autorizado?;Delimitar el area de reempaque;Pendiente
+Cochabamba;Picking;¿Los pallets están en las áreas demarcadas?;Definir lugares de pallets de devoluviones de mercado;Pendiente
+Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;Gestionando alarma para aves;Pendiente
+Montero;Picking;¿Todos los productos están dentro de la fecha de vencimiento y del plazo comercial?;Pallet con fecha errónea de frente estiba, solucionado;Cerrada
+Montero;Estiba;¿Los productos están limpios, sin presencia de polvo?;Realizar limpieza de productos (desempolvar ;Pendiente
+Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;Gestionar de alarma contra aves;Pendiente
+Montero;Reempaque;¿El área de reempaque es accesible únicamente para personal autorizado?;La regilla se quebró, ya en gestion;Pendiente
+Montero;Reempaque;¿El área de reempaque está limpia?;Limpieza de mueble de envases ;Pendiente
+Cochabamba;Reempaque;¿El área de reempaque está limpia?;Se debe hacer 5s de la zona ya que se tiene termocontraible en el piso;Pendiente
+Sucre;Picking;¿Los productos están limpios, sin presencia de polvo?;Limpieza inmediata tras deteccion;Cerrada
+Riberalta;Picking;¿Los pallets están en las áreas demarcadas?;No esta demarcada...........................................................................;Pendiente
+Montero;Picking;¿Los pallets están en las áreas demarcadas?;Se moverá el pallet al lugar que esta designado ;Pendiente
+Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;Se realizará fumigación;Pendiente
+Montero;Reempaque;¿El área de reempaque es accesible únicamente para personal autorizado?;Gestionando cambio de cerradura;Pendiente
+Cobija;Picking;¿Los pallets están en las áreas demarcadas?;De marcar el area para las paletas;Pendiente
+Cobija;Estiba;¿Los productos están limpios, sin presencia de polvo?;Establecer una rutina con la sopladora industrial;Pendiente
+Cobija;Reempaque;¿Los productos en la estantería respetan el límite de seguridad y las reglas de apilamiento?;Gestionar una estanteria para la zona de reempaque;Pendiente
+Riberalta;Reempaque;¿Los productos están organizados en las áreas demarcadas?;no estan demarcadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa;Pendiente
+Cochabamba;Picking;¿Los pallets están en las áreas demarcadas?;Paletas con traspapelado fuera de lugar;Pendiente
+Cochabamba;Picking;¿Los productos están limpios, sin presencia de polvo?;Falta limpiar producto tipo c ;Pendiente
+Cochabamba;Estiba;Si aplica, ¿los envases retornables RGB están encajados y/o asegurados con zuncho o amarre?;Caja paceña 620 sin 2 pitas;Pendiente
+Oruro;Picking;¿Los pallets están en las áreas demarcadas?;se acomodo en el momento;Pendiente
+Oruro;Picking;¿Los pallets están libres de fugas, botellas rotas, microperforaciones o productos dañados?;se envio a reempaque;Pendiente
+Oruro;Estiba;¿El piso del almacén está limpio y sin basura?;se reforzo frecuencia de 5s;Pendiente
+Montero;Picking;¿El piso del área de Picking está limpio y sin basura?;Limpieza con equipo Karcher en picking ;Pendiente
+Montero;Picking;¿Los pallets están en las áreas demarcadas?;Colocar pallets en su lugar;Pendiente
+Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;Se están gestionando con proveedores alternativas;Pendiente
+Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;Gestión de alarma o pinzones para palomas;Pendiente
+Montero;Reempaque;¿El área de reempaque está libre de plagas y mosquitos?;Presencia de aves, en gestion ;Pendiente
+El Alto;Estiba;¿Todos los pallets están en las áreas demarcadas?;Solicitar la demar acion si corresponde ;Pendiente
+Yacuiba;Picking;¿Los pallets están en las áreas demarcadas?;Revisar el Layout de bodega para optimizar espacios;Pendiente
+Cobija;Picking;¿Los pallets están en las áreas demarcadas?;Designar un sector para las paletas dentro de picking;Pendiente
+Cobija;Picking;¿Los productos están limpios, sin presencia de polvo?;Espera de llegada de la sopladora;Pendiente
+Cobija;Estiba;¿Todos los pallets están en las áreas demarcadas?;Realizar mantenimineto a sendas peatonales;Pendiente

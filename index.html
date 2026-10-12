@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard Ronda de Calidad</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f4f6f9;
+    padding:20px;
+}
+
+/* ENCABEZADO */
+
+.header{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    border-left:8px solid #FFDC30;
+}
+
+.header h1{
+    color:#000;
+}
+
+.header p{
+    color:#777;
+}
+
+/* FILTROS */
+
+
+.filtros{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.filtros h3{
+    margin-bottom:10px;
+}
+
+.filtros button{
+    background:#FFDC30;
+    color:#000;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    margin:5px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.filtros button:hover{
+    background:#e6c300;
+}
+
+.activo{
+    background:#000 !important;
+    color:#FFDC30 !important;
+    transform:scale(1.05);
+    box-shadow:0 4px 10px rgba(0,0,0,.3);
+}
+
+.filtros-sites{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:10px;
+
+}
+
+.filtros-sites button{
+
+    background:#FFDC30;
+    color:#000;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+
+}
+
+.filtros-sites button:hover{
+
+    background:#e6c300;
+
+}
+
+.filtros select{
+
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    margin:5px;
+
+}
+
+
+/* KPI */
+
+.kpis{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+    border-top:5px solid #FFDC30;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#666;
+    margin-bottom:10px;
+}
+
+.valor{
+    font-size:36px;
+    color:#000;
+    font-weight:bold;
+}
+
+/* SECCIONES */
+
+.seccion{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-top:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.seccion h2{
+    margin-bottom:15px;
+}
+
+/* GRAFICOS */
+
+.chart-box{
+    position:relative;
+    height:450px;
+    width:100%;
+}
+
+/* TABLAS */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th{
+    background:#FFDC30;
+    color:#000;
+}
+
+th,td{
+    padding:10px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+.verde{
+    color:green;
+    font-weight:bold;
+}
+
+.amarillo{
+    color:orange;
+    font-weight:bold;
+}
+
+.rojo{
+    color:red;
+    font-weight:bold;
+}
+
+ol li{
+    margin-bottom:8px;
+}
+
+.hallazgos-container{
+
+    display:flex;
+    gap:20px;
+    align-items:center;
+    flex-wrap:wrap;
+
+}
+
+.hallazgos-chart{
+
+    flex:2;
+    min-width:350px;
+    height:350px;
+    position:relative;
+
+}
+
+.hallazgos-table{
+
+    flex:1;
+    min-width:250px;
+
+}
+
+#tablaAcciones{
+    font-size:12px;
+}
+
+#tablaAcciones td{
+    text-align:left;
+}
+
+#tablaAcciones th{
+    position:sticky;
+    top:0;
+}
+
+.seccion-acciones{
+    max-height:400px;
+    overflow:auto;
+}
+
+.pendiente{
+    color:#dc3545;
+    font-weight:bold;
+}
+
+.en_proceso{
+    color:#ff9800;
+    font-weight:bold;
+}
+
+.cerrada{
+    color:#28a745;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>📋 Ronda de Calidad</h1>
+    <p>Seguimiento Nacional de Adherencia</p>
+</div>
+
+<div class="header">
+<h3>🕒 Última Actualización</h3>
+    <div class="valor" id="ultimaActualizacion"></div>
+</div>
+
+<div class="filtros">
+
+    <h3>Filtros</h3>
+
+<button class="btn-area activo"
+onclick="filtrarArea('Todas', this)">
+Todas
+</button>
+
+<button class="btn-area"
+onclick="filtrarArea('General', this)">
+General
+</button>
+
+<button class="btn-area"
+onclick="filtrarArea('Picking', this)">
+Picking
+</button>
+
+<button class="btn-area"
+onclick="filtrarArea('Reempaque', this)">
+Reempaque
+</button>
+
+<button class="btn-area"
+onclick="filtrarArea('Estiba', this)">
+Estiba
+</button>
+
+<div class="filtros-sites">
+
+<button class="btn-site activo"
+onclick="filtrarSite('Todos', this)">
+Todos
+</button>
+
+<button class="btn-site"
+onclick="filtrarSite('Montero', this)">
+Montero
+</button>
+
+<button class="btn-site"
+onclick="filtrarSite('Cochabamba', this)">
+Cochabamba
+</button>
+
+<button class="btn-site"
+onclick="filtrarSite('Oruro', this)">
+Oruro
+</button>
+
+<button class="btn-site"
+onclick="filtrarSite('El Alto', this)">
+El Alto
+</button>
+
+<button class="btn-site"
+onclick="filtrarSite('Cobija', this)">
+Cobija
+</button>
+
+<button class="btn-site"
+onclick="filtrarSite('Yacuiba', this)">
+Yacuiba
+</button>
+
+<button class="btn-site"
+onclick="filtrarSite('Tarija', this)">
+Tarija
+</button>
+
+<button class="btn-site"
+onclick="filtrarSite('Trinidad', this)">
+Trinidad
+</button>
+
+<button class="btn-site"
+onclick="filtrarSite('Potosí', this)">
+Potosí
+</button>
+
+<button class="btn-site"
+onclick="filtrarSite('Sucre', this)">
+Sucre
+</button>
+
+<button class="btn-site"
+onclick="filtrarSite('Riberalta', this)">
+Riberalta
+</button>
+
+</div>
+
+<select id="filtroEstado" onchange="cargarAcciones()">
+    <option value="Todos">Todos los Estados</option>
+    <option value="Pendiente">Pendiente</option>
+    <option value="Cerrada">Cerrada</option>
+</select>
+
+</div>
+
+<div class="kpis">
+
+<div class="card">
+    <h3>📅 Semana Actual</h3>
+    <div class="valor" id="semanaActual"></div>
+</div>
+
+<div class="card">
+    <h3>Adherencia Semanal</h3>
+    <div class="valor" id="adhSemanal">0%</div>
+</div>
+
+<div class="card">
+    <h3>Adherencia Mensual</h3>
+    <div class="valor" id="adhMensual">0%</div>
+</div>
+
+<div class="card">
+    <h3>Rondas Realizadas</h3>
+    <div class="valor" id="rondas">0</div>
+</div>
+
+<div class="card">
+    <h3>Hallazgos</h3>
+    <div class="valor" id="hallazgos">0</div>
+</div>
+
+<div class="card">
+    <h3>Sites Cumpliendo</h3>
+    <div class="valor" id="sites">0/0</div>
+</div>
+ 
+<br>
+<div class="card">
+    <h3>🟢 Acciones Cerradas</h3>
+    <div class="valor" id="accionesCerradas">0</div>
+</div>
+
+<div class="card">
+    <h3>🔴 Acciones Pendientes</h3>
+    <div class="valor" id="accionesPendientesKPI">0</div>
+</div>
+ 
+</div>
+
+<div class="seccion">
+
+    <h2>📊 Adherencia por Site</h2>
+
+    <div class="chart-box">
+        <canvas id="graficoSites"></canvas>
+    </div>
+
+</div>
+
+<div class="seccion">
+
+    <h2>📈 Tendencia Semanal</h2>
+
+    <div class="chart-box">
+        <canvas id="graficoSemana"></canvas>
+    </div>
+
+</div>
+
+<div class="seccion">
+<h2>🍩 Hallazgos por Área</h2>
+	<div class="hallazgos-container">
+    
+	<div class="hallazgos-chart">
+        <canvas id="graficoHallazgos"></canvas>
+    </div>
+
+    <div class="hallazgos-table">
+
+        <table id="tablaHallazgos">
+
+            <tr>
+                <th>Área</th>
+                <th>Hallazgos</th>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+</div>
+
+<div class="seccion">
+
+    <h2>🚨 Top Hallazgos</h2>
+
+	<ol id="topHallazgos">
+
+	</ol>
+
+</div>
+
+<div class="seccion">
+
+    <h2>✅ Acciones Correctivas</h2>
+
+    <div class="seccion-acciones">
+
+        <table id="tablaAcciones">
+        </table>
+
+    </div>
+
+</div>
+<script>
+
+let siteSeleccionado = "Todos";
+let areaSeleccionada = "Todas";
+
+function filtrarArea(area, boton){
+
+    document
+        .querySelectorAll('.btn-area')
+        .forEach(btn =>
+            btn.classList.remove('activo')
+        );
+
+    boton.classList.add('activo');
+
+    areaSeleccionada = area;
+
+    cargarHallazgos();
+    cargarTopHallazgos();
+    cargarAcciones();
+
+}
+
+
+window.addEventListener('load', function(){
+
+    // GRAFICO DE BARRAS
+
+    graficoSites = new Chart(
+document.getElementById('graficoSites'),
+{
+         type: 'bar',
+
+        data: {
+            labels: [
+                'Santa Cruz',
+                'Cochabamba',
+                'La Paz',
+                'Sucre'
+            ],
+            datasets: [{
+                label: 'Adherencia %',
+                data: [100,90,85,70],
+                backgroundColor: '#FFDC30',
+                borderColor: '#000000',
+                borderWidth: 1
+            }]
+        },
+
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+
+    });
+
+
+
+    // GRAFICO DE LINEA
+
+    graficoSemana = new Chart(
+document.getElementById('graficoSemana'),
+{
+
+        type: 'line',
+
+        data: {
+            labels: [
+                'Semana 33',
+                'Semana 34',
+                'Semana 35',
+                'Semana 36',
+                'Semana 37'
+            ],
+            datasets: [{
+                label: 'Adherencia %',
+                data: [82,88,95,90,92],
+                borderColor: '#000000',
+                backgroundColor: '#FFDC30',
+                borderWidth: 3,
+                tension: 0.3
+            }]
+        },
+
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+
+    });
+
+});
+
+// GRAFICO DONA
+
+graficoHallazgos = new Chart(
+document.getElementById('graficoHallazgos'),
+{
+    type:'doughnut',
+
+    data:{
+        labels:[
+            'Picking',
+            'Estiba',
+            'Reempaque',
+            'General'
+        ],
+
+        datasets:[{
+
+            data:[
+                35,
+                25,
+                20,
+                10
+            ],
+
+            backgroundColor:[
+                '#FFDC30',
+                '#000000',
+                '#999999',
+                '#e6c300'
+            ]
+        }]
+    },
+
+    options:{
+        responsive:true,
+        maintainAspectRatio:false
+    }
+});
+
+// ACTUALIZACIONES
+ 
+function actualizarFecha() {
+
+    const hoy = new Date();
+
+    const fecha =
+        hoy.toLocaleDateString('es-BO') +
+        " " +
+        hoy.toLocaleTimeString('es-BO');
+
+    document.getElementById("ultimaActualizacion").innerText = fecha;
+
+}
+
+actualizarFecha();
+
+function obtenerSemanaActual(){
+
+    const hoy = new Date();
+
+    const inicioAnio =
+        new Date(hoy.getFullYear(),0,1);
+
+    const dias =
+        Math.floor((hoy - inicioAnio) / 86400000);
+
+    const semana =
+        Math.ceil((dias + inicioAnio.getDay()+1)/7);
+
+    document.getElementById("semanaActual").innerText =
+        semana;
+}
+
+obtenerSemanaActual();
+
+function filtrarSite(site, boton){
+
+    document
+        .querySelectorAll('.btn-site')
+        .forEach(btn =>
+            btn.classList.remove('activo')
+        );
+
+    boton.classList.add('activo');
+
+    siteSeleccionado = site;
+
+    cargarAcciones();
+    cargarTopHallazgos();
+    cargarHallazgos();
+    cargarSitesCumpliendo();
+    cargarKPIsSite();
+    cargarRondasSite();
+    cargarTendenciaSite();
+    cargarGraficoSites();
+
+}
+</script>
+
+<script>
+
+async function cargarKPIs(){
+
+    const respuesta = await fetch("dashboard_kpi.csv");
+
+    const texto = await respuesta.text();
+
+    const filas = texto.trim().split("\n");
+
+    const encabezados = filas[0].split(";");
+
+    const valores = filas[1].split(";");
+
+    const datos = {};
+
+    encabezados.forEach((campo,index)=>{
+
+        datos[campo.trim()] =
+        valores[index]?.trim();
+
+    });
+
+    console.log(datos);
+
+    document.getElementById("adhSemanal").textContent =
+        datos["AdhSemanal"] || "-";
+
+    document.getElementById("adhMensual").textContent =
+        datos["AdhMensual"] || "-";
+
+    document.getElementById("rondas").textContent =
+        datos["Rondas"] || "-";
+
+    document.getElementById("hallazgos").textContent =
+        datos["Hallazgos"] || "-";
+
+    document.getElementById("acciones").textContent =
+        datos["AccionesPendientes"] || "-";
+
+    document.getElementById("sites").textContent =
+        datos["SitesCumpliendo"] || "-";
+
+}
+
+
+async function cargarGraficoSites(){
+
+    const respuesta =
+        await fetch("adherencia_site.csv");
+
+    const texto =
+        await respuesta.text();
+
+    const filas =
+        texto.trim().split("\n");
+
+    const filtroSite =
+        siteSeleccionado;
+
+    const labels = [];
+    const valores = [];
+
+    for(let i=1; i<filas.length; i++){
+
+        const columnas =
+            filas[i].split(";");
+
+        const site =
+            columnas[0].trim();
+
+        if(
+            filtroSite !== "Todos" &&
+            site !== filtroSite
+        ){
+            continue;
+        }
+
+        labels.push(site);
+
+        valores.push(
+            parseFloat(
+                columnas[1]
+                    .replace("%","")
+                    .replace(",",".")
+            )
+        );
+
+    }
+
+    graficoSites.data.labels =
+        labels;
+
+    graficoSites.data.datasets[0].data =
+        valores;
+
+    graficoSites.update();
+
+}
+
+async function cargarTendencia(){
+
+    const respuesta =
+        await fetch("tendencia.csv");
+
+    const texto =
+        await respuesta.text();
+
+    const filas =
+        texto.trim().split("\n");
+
+    const semanas = [];
+    const valores = [];
+
+    for(let i=1; i<filas.length; i++){
+
+        const columnas =
+            filas[i].split(";");
+
+        semanas.push(
+            "Semana " + columnas[0].trim()
+        );
+
+        valores.push(
+            parseFloat(
+                columnas[3]
+                    .replace("%","")
+                    .replace(",",".")
+            )
+        );
+
+    }
+
+    graficoSemana.data.labels =
+        semanas;
+
+    graficoSemana.data.datasets[0].data =
+        valores;
+
+    graficoSemana.update();
+
+}
+
+async function cargarHallazgos(){
+
+    const tabla =
+        document.getElementById("tablaHallazgos");
+tabla.innerHTML = `
+<tr>
+    <th>Área</th>
+    <th>Hallazgos</th>
+</tr>
+`;
+    const respuesta =
+        await fetch("hallazgos_area_site.csv");
+
+    const texto =
+        await respuesta.text();
+
+    const filas =
+        texto.trim().split("\n");
+
+  const resumenHallazgos = {
+    "General":0,
+    "Picking":0,
+    "Estiba":0,
+    "Reempaque":0
+};
+
+    const filtroSite =
+        siteSeleccionado;
+
+    for(let i=1; i<filas.length; i++){
+
+        const columnas =
+            filas[i].split(";");
+
+        const site =
+            columnas[0].trim();
+
+        const area =
+            columnas[1].trim();
+
+if(
+    areaSeleccionada !== "Todas" &&
+    area !== areaSeleccionada
+){
+    continue;
+}
+
+       const hallazgos =
+    parseInt(columnas[2]);
+
+        if(
+            filtroSite !== "Todos" &&
+            site !== filtroSite
+        ){
+            continue;
+        }
+resumenHallazgos[area] += hallazgos;
+
+ }
+
+tabla.innerHTML += `
+<tr>
+    <td>General</td>
+    <td>${resumenHallazgos["General"]}</td>
+</tr>
+<tr>
+    <td>Picking</td>
+    <td>${resumenHallazgos["Picking"]}</td>
+</tr>
+<tr>
+    <td>Estiba</td>
+    <td>${resumenHallazgos["Estiba"]}</td>
+</tr>
+<tr>
+    <td>Reempaque</td>
+    <td>${resumenHallazgos["Reempaque"]}</td>
+</tr>
+`;
+
+graficoHallazgos.data.labels = [
+    "General",
+    "Picking",
+    "Estiba",
+    "Reempaque"
+];
+
+graficoHallazgos.data.datasets[0].data = [
+    resumenHallazgos["General"],
+    resumenHallazgos["Picking"],
+    resumenHallazgos["Estiba"],
+    resumenHallazgos["Reempaque"]
+];
+
+console.log(
+    "Datos Dona:",
+    resumenHallazgos
+);
+
+const totalHallazgos =
+    resumenHallazgos["General"] +
+    resumenHallazgos["Picking"] +
+    resumenHallazgos["Estiba"] +
+    resumenHallazgos["Reempaque"];
+
+document.getElementById("hallazgos").textContent =
+    totalHallazgos;
+
+graficoHallazgos.update();
+
+}
+
+async function cargarSitesCumpliendo(){
+
+    const respuesta =
+        await fetch("adherencia_site.csv");
+
+    const texto =
+        await respuesta.text();
+
+    const filas =
+        texto.trim().split("\n");
+
+    let cumplen = 0;
+    let total = 0;
+
+    const filtroSite =
+       siteSeleccionado;
+
+    for(let i=1; i<filas.length; i++){
+
+        const columnas =
+            filas[i].split(";");
+
+        const site =
+            columnas[0].trim();
+
+        const adherencia =
+            parseFloat(
+                columnas[1]
+                    .replace("%","")
+                    .replace(",",".")
+            );
+
+        if(
+            filtroSite !== "Todos" &&
+            site !== filtroSite
+        ){
+            continue;
+        }
+
+        total++;
+
+        if(adherencia >= 95){
+            cumplen++;
+        }
+
+    }
+
+    document.getElementById("sites").textContent =
+        `${cumplen}/${total}`;
+
+}
+
+async function cargarTopHallazgos(){
+
+    const respuesta =
+        await fetch("top_hallazgos_site.csv");
+
+    const texto =
+        await respuesta.text();
+
+    const filas =
+        texto.trim().split("\n");
+
+    const lista =
+        document.getElementById("topHallazgos");
+
+    lista.innerHTML = "";
+
+    const filtroSite =
+       siteSeleccionado;
+
+    let contador = 0;
+
+    for(let i=1; i<filas.length; i++){
+
+        const columnas =
+            filas[i].split(";");
+
+        const site =
+            columnas[0].trim();
+
+        const area =
+            columnas[1].trim();
+
+if(
+    areaSeleccionada !== "Todas" &&
+    area !== areaSeleccionada
+){
+    continue;
+}
+
+        const pregunta =
+            columnas[2].trim();
+
+        const cantidad =
+            columnas[3].trim();
+
+        if(
+            filtroSite !== "Todos" &&
+            site !== filtroSite
+        ){
+            continue;
+        }
+
+        lista.innerHTML += `
+            <li>
+                <strong>${area}</strong> -
+                ${pregunta}
+                <strong>(${cantidad})</strong>
+            </li>
+        `;
+
+        contador++;
+
+        if(contador >= 5){
+            break;
+        }
+    }
+}
+
+async function cargarAcciones(){
+
+    const respuesta =
+        await fetch("acciones.csv");
+
+    const texto =
+        await respuesta.text();
+
+    const filas =
+        texto.trim().split("\n");
+
+    const tabla =
+        document.getElementById("tablaAcciones");
+
+let cerradas = 0;
+let pendientes = 0;
+
+    tabla.innerHTML = `
+        <tr>
+            <th>Site</th>
+            <th>Área</th>
+            <th>Hallazgo</th>
+            <th>Acción</th>
+            <th>Estado</th>
+        </tr>
+    `;
+
+const filtroEstado =
+    document.getElementById("filtroEstado").value;
+
+const filtroSite =
+   siteSeleccionado;
+
+for(let i=1; i<filas.length; i++){
+
+    const columnas =
+        filas[i].split(";");
+
+const site =
+    columnas[0].trim();
+const area =
+    columnas[1].trim();
+if(
+    areaSeleccionada !== "Todas" &&
+    area !== areaSeleccionada
+){
+    continue;
+}
+
+    const estado =
+        columnas[4].trim();
+
+    if(
+        filtroEstado !== "Todos" &&
+        estado !== filtroEstado
+    ){
+        continue;
+    }
+
+if(
+    filtroSite !== "Todos" &&
+    site !== filtroSite
+){
+    continue;
+}
+
+if(estado.toLowerCase() === "cerrada"){
+    cerradas++;
+}
+
+if(estado.toLowerCase() === "pendiente"){
+    pendientes++;
+}
+
+        tabla.innerHTML += `
+            <tr>
+                <td>${columnas[0]}</td>
+                <td>${columnas[1]}</td>
+                <td>${columnas[2]}</td>
+                <td>${columnas[3]}</td>
+                <td class="${estado.toLowerCase().replace(" ","_")}">
+                    ${estado}
+                </td>
+            </tr>
+        `;
+    }
+document.getElementById("accionesCerradas").textContent =
+    cerradas;
+
+document.getElementById("accionesPendientesKPI").textContent =
+    pendientes;
+
+document.getElementById("acciones").textContent =
+    pendientes;
+}
+
+async function cargarKPIsSite(){
+
+    const respuesta =
+        await fetch("kpi_site.csv");
+
+    const texto =
+        await respuesta.text();
+
+    const filas =
+        texto.trim().split("\n");
+
+    const filtroSite =
+        siteSeleccionado;
+
+    if(filtroSite === "Todos"){
+        cargarKPIs();
+        return;
+    }
+
+    for(let i=1; i<filas.length; i++){
+
+        const columnas =
+            filas[i].split(";");
+
+        const site =
+            columnas[0].trim();
+
+        if(site !== filtroSite){
+            continue;
+        }
+
+        document.getElementById("adhSemanal").textContent =
+            columnas[1].trim();
+
+        document.getElementById("adhMensual").textContent =
+            columnas[2].trim();
+
+        break;
+    }
+
+}
+
+async function cargarRondasSite(){
+
+    const respuesta =
+        await fetch("rondas_site.csv");
+
+    const texto =
+        await respuesta.text();
+
+    const filas =
+        texto.trim().split("\n");
+
+    const filtroSite =
+       siteSeleccionado;
+
+    if(filtroSite === "Todos"){
+        return;
+    }
+
+    for(let i=1; i<filas.length; i++){
+
+        const columnas =
+            filas[i].split(";");
+
+        const site =
+            columnas[0].trim();
+
+        if(site !== filtroSite){
+            continue;
+        }
+
+        document.getElementById("rondas").textContent =
+            columnas[1].trim();
+
+        break;
+    }
+}
+
+async function cargarTendenciaSite(){
+
+    const respuesta =
+        await fetch("tendencia_site.csv");
+
+    const texto =
+        await respuesta.text();
+
+    const filas =
+        texto.trim().split("\n");
+
+    const filtroSite =
+       siteSeleccionado;
+
+    const semanas = [];
+    const valores = [];
+
+    const resumenSemanas = {};
+
+    for(let i=1; i<filas.length; i++){
+
+        const columnas =
+            filas[i].split(";");
+
+        const site =
+            columnas[0].trim();
+
+        const semana =
+            columnas[1].trim();
+
+        const adherencia =
+            parseFloat(columnas[2]);
+
+        if(filtroSite === "Todos"){
+
+            if(!resumenSemanas[semana]){
+
+                resumenSemanas[semana] = {
+                    suma:0,
+                    cantidad:0
+                };
+
+            }
+
+            resumenSemanas[semana].suma += adherencia;
+            resumenSemanas[semana].cantidad++;
+
+        }
+        else{
+
+            if(site !== filtroSite){
+                continue;
+            }
+
+            semanas.push(
+                "Semana " + semana
+            );
+
+            valores.push(
+                adherencia
+            );
+
+        }
+
+    }
+
+    if(filtroSite === "Todos"){
+
+        Object.keys(resumenSemanas)
+            .sort((a,b)=>a-b)
+            .forEach(semana => {
+
+                semanas.push(
+                    "Semana " + semana
+                );
+
+                valores.push(
+                    (
+                        resumenSemanas[semana].suma /
+                        resumenSemanas[semana].cantidad
+                    ).toFixed(1)
+                );
+
+            });
+    }
+
+    graficoSemana.data.labels =
+        semanas;
+
+    graficoSemana.data.datasets[0].data =
+        valores;
+
+    graficoSemana.update();
+
+}
+
+cargarKPIs();
+cargarGraficoSites();
+cargarTendencia();
+cargarHallazgos();
+cargarTopHallazgos();
+cargarAcciones();
+cargarSitesCumpliendo();
+cargarKPIsSite();
+cargarRondasSite();
+cargarTendenciaSite();
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

@@ -268,7 +268,7 @@ ol li{
     font-weight:bold;
 }
 .fecha-actualizacion{
-    font-size:14px;
+    font-size:15px;
     color:#777;
     font-style:italic;
 }
@@ -421,8 +421,7 @@ Riberalta
     <h3>Sites Cumpliendo</h3>
     <div class="valor" id="sites">0/0</div>
 </div>
- 
-<br>
+
 <div class="card">
     <h3>🟢 Acciones Cerradas</h3>
     <div class="valor" id="accionesCerradas">0</div>
@@ -741,9 +740,6 @@ async function cargarKPIs(){
 
     document.getElementById("hallazgos").textContent =
         datos["Hallazgos"] || "-";
-
-    document.getElementById("acciones").textContent =
-        datos["AccionesPendientes"] || "-";
 
     document.getElementById("sites").textContent =
         datos["SitesCumpliendo"] || "-";
@@ -1171,8 +1167,6 @@ document.getElementById("accionesCerradas").textContent =
 document.getElementById("accionesPendientesKPI").textContent =
     pendientes;
 
-document.getElementById("acciones").textContent =
-    pendientes;
 }
 
 async function cargarKPIsSite(){

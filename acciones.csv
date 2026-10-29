@@ -70,3 +70,16 @@ Potosí;Estiba;¿Los productos están limpios, sin presencia de polvo?;Ralizar 5
 Tarija;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;Limpiar la telaraña de picking;Pendiente
 Tarija;Estiba;¿Los pallets estan identificados (SKU, Fecha de vencimiento, lote, etc)?;Se etiquetaran las paletas por el auxiliar;Pendiente
 Tarija;Estiba;¿Estan funcionando correctamente los termometros del almacen?;Colocar termómetro al almacén central de sémola;Pendiente
+Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;En gestión  colocado de pinzones para aves;En Proceso
+Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;En gestión pinzones para aves;Pendiente
+Montero;Reempaque;¿Todos los productos en la estantería están dentro del plazo de comercialización?;Producto con fecha de bloqueo de hoy, en gestión el derrame;Pendiente
+Riberalta;Estiba;¿Los productos están limpios, sin presencia de polvo?;PRECISAMOS CAPUCHONES DE POLVO.............................;Pendiente
+El Alto;Picking;¿Los pallets están en las áreas demarcadas?;Pintar sectores de acomodo de las paletas que no estan la ruma ;Pendiente
+Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;Gestión de pinzones y alarma para aves;Pendiente
+Yacuiba;General;Si aplica, ¿los productos no conformes dentro del area, se encuentran bloqueados de acuerdo a la politica de bloqueo?;Gestionar el envío o derrame de la gaseosa de 2.5 litros que no entra en la jaula PRI;Pendiente
+Riberalta;Estiba;¿Estan funcionando correctamente los termometros del almacen?;no esta funcional.................................................................;Pendiente
+Tarija;General;Si aplica, ¿los productos no conformes dentro del area, se encuentran bloqueados de acuerdo a la politica de bloqueo?;Colocar candado a la Traspaleta y aviso de SAP al letrero;Pendiente
+Tarija;Estiba;¿El piso del almacén está limpio y sin basura?;Falta de limpieza en bodega 3;Pendiente
+Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;Ya se tiene fecha de instalación de alarma para aves;Pendiente
+Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;Gestión de alarme contra aves;Pendiente
+El Alto;Estiba;¿Los pallets de madera están en buenas condiciones (sin roturas)?;hacer el plan de separación de paletas viejas ;Pendiente

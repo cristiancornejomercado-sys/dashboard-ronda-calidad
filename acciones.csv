@@ -27,7 +27,7 @@ Cobija;Reempaque;¿El área de reempaque es accesible únicamente para personal 
 Cochabamba;Picking;¿Los pallets están en las áreas demarcadas?;Definir lugares de pallets de devoluviones de mercado;Pendiente
 Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;Gestionando alarma para aves;Pendiente
 Montero;Picking;¿Todos los productos están dentro de la fecha de vencimiento y del plazo comercial?;Pallet con fecha errónea de frente estiba, solucionado;Cerrada
-Montero;Estiba;¿Los productos están limpios, sin presencia de polvo?;Realizar limpieza de productos (desempolvar ;Pendiente
+Montero;Estiba;¿Los productos están limpios, sin presencia de polvo?;Realizar limpieza de productos (desempolvar ;Cerrada
 Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;Gestionar de alarma contra aves;Pendiente
 Montero;Reempaque;¿El área de reempaque es accesible únicamente para personal autorizado?;La regilla se quebró, ya en gestion;Pendiente
 Montero;Reempaque;¿El área de reempaque está limpia?;Limpieza de mueble de envases ;Pendiente
@@ -83,3 +83,9 @@ Tarija;Estiba;¿El piso del almacén está limpio y sin basura?;Falta de limpiez
 Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;Ya se tiene fecha de instalación de alarma para aves;Pendiente
 Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;Gestión de alarme contra aves;Pendiente
 El Alto;Estiba;¿Los pallets de madera están en buenas condiciones (sin roturas)?;hacer el plan de separación de paletas viejas ;Pendiente
+Cochabamba;Reempaque;¿Todos los productos en la estantería están dentro del plazo de comercialización?;Llevar la budweiser 269 ..zuskfnnfkakvkkaisowkvw;Pendiente
+Riberalta;Estiba;¿Todos los pallets están en las áreas demarcadas?;...................................................................................;Pendiente
+Yacuiba;General;Si aplica, ¿los productos no conformes dentro del area, se encuentran bloqueados de acuerdo a la politica de bloqueo?;Falta la cinta roja en una paleta de PRI;Pendiente
+Yacuiba;Estiba;¿El piso del almacén está limpio y sin basura?;Se tiene paletas y strech film fuera de lugar;Pendiente
+Yacuiba;Reempaque;¿Los productos están organizados en las áreas demarcadas?;Se tiene productos fuera del estante y de la jaula de rotura;Pendiente
+Yacuiba;Reempaque;¿El área de reempaque es accesible únicamente para personal autorizado?;El candado no estaba asegurado;Pendiente

@@ -43,14 +43,18 @@ Cobija;Estiba;¿Todos los pallets están en las áreas demarcadas?;1
 Cochabamba;Picking;Si aplica, ¿los envases retornables RGB están encajados y/o asegurados con zuncho o amarre?;1
 Trinidad;Estiba;¿Todos los pallets están alineados y sin inclinación?;1
 Yacuiba;Estiba;¿Estan funcionando correctamente los termometros del almacen?;1
-Yacuiba;Reempaque;¿El área de reempaque es accesible únicamente para personal autorizado?;1
+Yacuiba;Reempaque;¿El área de reempaque es accesible únicamente para personal autorizado?;2
 Potosí;Picking;¿Los productos están limpios, sin presencia de polvo?;1
 Potosí;Estiba;¿Los productos están limpios, sin presencia de polvo?;1
 Tarija;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;1
 Tarija;Estiba;¿Los pallets estan identificados (SKU, Fecha de vencimiento, lote, etc)?;1
 Montero;Reempaque;¿Todos los productos en la estantería están dentro del plazo de comercialización?;1
 El Alto;Picking;¿Los pallets están en las áreas demarcadas?;1
-Yacuiba;General;Si aplica, ¿los productos no conformes dentro del area, se encuentran bloqueados de acuerdo a la politica de bloqueo?;1
+Yacuiba;General;Si aplica, ¿los productos no conformes dentro del area, se encuentran bloqueados de acuerdo a la politica de bloqueo?;2
 Riberalta;Estiba;¿Estan funcionando correctamente los termometros del almacen?;1
 Tarija;General;Si aplica, ¿los productos no conformes dentro del area, se encuentran bloqueados de acuerdo a la politica de bloqueo?;1
 El Alto;Estiba;¿Los pallets de madera están en buenas condiciones (sin roturas)?;1
+Cochabamba;Reempaque;¿Todos los productos en la estantería están dentro del plazo de comercialización?;1
+Riberalta;Estiba;¿Todos los pallets están en las áreas demarcadas?;1
+Yacuiba;Estiba;¿El piso del almacén está limpio y sin basura?;1
+Yacuiba;Reempaque;¿Los productos están organizados en las áreas demarcadas?;1

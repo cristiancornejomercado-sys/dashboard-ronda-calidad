@@ -1,11 +1,11 @@
 ﻿Site;Área;Pregunta;Cantidad
-Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;7
-Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;6
+Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;8
+Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;7
 Cochabamba;Picking;¿Los productos están limpios, sin presencia de polvo?;3
 Montero;Picking;¿El piso del área de Picking está limpio y sin basura?;3
 Cobija;Picking;¿Los pallets están en las áreas demarcadas?;3
 Cochabamba;Picking;¿Los pallets están en las áreas demarcadas?;3
-Montero;Picking;¿Los productos están limpios, sin presencia de polvo?;2
+Montero;Picking;¿Los productos están limpios, sin presencia de polvo?;3
 Montero;Reempaque;¿El área de reempaque es accesible únicamente para personal autorizado?;2
 Oruro;Picking;¿Los pallets están en las áreas demarcadas?;2
 Oruro;Estiba;¿El piso del almacén está limpio y sin basura?;2
@@ -38,7 +38,7 @@ Cochabamba;Estiba;Si aplica, ¿los envases retornables RGB están encajados y/o 
 Oruro;Picking;¿Los pallets están libres de fugas, botellas rotas, microperforaciones o productos dañados?;1
 Montero;Reempaque;¿El área de reempaque está libre de plagas y mosquitos?;1
 El Alto;Estiba;¿Todos los pallets están en las áreas demarcadas?;1
-Yacuiba;Picking;¿Los pallets están en las áreas demarcadas?;1
+Yacuiba;Picking;¿Los pallets están en las áreas demarcadas?;2
 Cobija;Estiba;¿Todos los pallets están en las áreas demarcadas?;1
 Cochabamba;Picking;Si aplica, ¿los envases retornables RGB están encajados y/o asegurados con zuncho o amarre?;1
 Trinidad;Estiba;¿Todos los pallets están alineados y sin inclinación?;1
@@ -58,3 +58,6 @@ Cochabamba;Reempaque;¿Todos los productos en la estantería están dentro del p
 Riberalta;Estiba;¿Todos los pallets están en las áreas demarcadas?;1
 Yacuiba;Estiba;¿El piso del almacén está limpio y sin basura?;1
 Yacuiba;Reempaque;¿Los productos están organizados en las áreas demarcadas?;1
+Yacuiba;Estiba;¿Los pallets estan identificados (SKU, Fecha de vencimiento, lote, etc)?;1
+Montero;Picking;¿Los productos están limpios, sin presencia de polvo?;3
+Montero;Picking;¿Los pallets están libres de fugas, botellas rotas, microperforaciones o productos dañados?;1

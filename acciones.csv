@@ -89,3 +89,9 @@ Yacuiba;General;Si aplica, ¿los productos no conformes dentro del area, se encu
 Yacuiba;Estiba;¿El piso del almacén está limpio y sin basura?;Se tiene paletas y strech film fuera de lugar;Pendiente
 Yacuiba;Reempaque;¿Los productos están organizados en las áreas demarcadas?;Se tiene productos fuera del estante y de la jaula de rotura;Pendiente
 Yacuiba;Reempaque;¿El área de reempaque es accesible únicamente para personal autorizado?;El candado no estaba asegurado;Pendiente
+Yacuiba;Picking;¿Los pallets están en las áreas demarcadas?;Reubicar paletas vacías que se encuentran fuera de picking;Pendiente
+Yacuiba;Estiba;¿Los pallets estan identificados (SKU, Fecha de vencimiento, lote, etc)?;Falta identificar algunas paletas de PT;Pendiente
+Montero;Picking;¿Los productos están limpios, sin presencia de polvo?;Se indicó a personal de limpieza que se desempolve el producto en picking;Pendiente
+Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;Instalación de alarmas para aves;Pendiente
+Montero;Picking;¿Los pallets están libres de fugas, botellas rotas, microperforaciones o productos dañados?;Llevar producto de picking a reempaque por daño en empaque secundario;Pendiente
+Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;Instalación de alarmas para palomas;Pendiente

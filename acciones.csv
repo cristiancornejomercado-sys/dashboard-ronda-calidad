@@ -95,3 +95,20 @@ Montero;Picking;¿Los productos están limpios, sin presencia de polvo?;Se indic
 Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;Instalación de alarmas para aves;Pendiente
 Montero;Picking;¿Los pallets están libres de fugas, botellas rotas, microperforaciones o productos dañados?;Llevar producto de picking a reempaque por daño en empaque secundario;Pendiente
 Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;Instalación de alarmas para palomas;Pendiente
+El Alto;Estiba;¿El piso del almacén está limpio y sin basura?;Reeforzar la limpieza del la bodega ;Pendiente
+El Alto;Estiba;¿Los pallets de madera están en buenas condiciones (sin roturas)?;Segrar los palets viejos con la directa ;Pendiente
+Yacuiba;Estiba;¿El piso del almacén está limpio y sin basura?;Culminar 5s en bodega al finalizar las cargas;Pendiente
+Montero;Picking;¿El área de Picking está libre de plagas (insectos, roedores o aves)?;Instalación de alarmar para aves ;Pendiente
+Montero;Picking;¿Los pallets están libres de fugas, botellas rotas, microperforaciones o productos dañados?;Enviar producto con envase secundario dañado a reempaque;Pendiente
+Montero;Estiba;¿El área está libre de plagas (insectos, roedores o aves)?;Instalación de alarma para aves y fumigación para los grillos;Pendiente
+Montero;Estiba;¿Los pallets están libres de fugas, botellas rotas, microperforaciones o productos dañados?;Pallet dañado de corona, enviar a picking;Pendiente
+Tarija;Picking;¿Los productos están limpios, sin presencia de polvo?;Gestionar la limpieza diaria de las paletas de SKU de picking;Pendiente
+Tarija;Estiba;¿Todos los pallets están alineados y sin inclinación?;Repaletizar la oriental mirinda;Pendiente
+Tarija;Reempaque;¿El área de reempaque está libre de plagas y mosquitos?;Derrame de la jaula de derrame;Pendiente
+Riberalta;Picking;¿Los pallets están en las áreas demarcadas?;No tenemos area demarcada;Pendiente
+Riberalta;Reempaque;¿Los productos están organizados en las áreas demarcadas?;Falta reempacar todo el producto;Pendiente
+Riberalta;Reempaque;¿El área de reempaque es accesible únicamente para personal autorizado?;No tenemos acceso con biometrico, se necesita armar;Pendiente
+Riberalta;Reempaque;¿El área de reempaque está limpia?;Demasiada rotura acumulada;Pendiente
+Cobija;Estiba;¿Todos los pallets están en las áreas demarcadas?;Demarcar el area de paletas;Pendiente
+Yacuiba;Estiba;¿Los productos están limpios, sin presencia de polvo?;Reforzar el cierre de bodega cuando no se tenga ciruclación de montacargas ;Pendiente
+El Alto;Picking;¿Los pallets de madera están en buenas condiciones (sin roturas) en el Picking?;Seguimos en el pla de separar las paletas de madera ;0

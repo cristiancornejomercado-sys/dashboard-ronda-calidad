@@ -111,4 +111,6 @@ Riberalta;Reempaque;¿El área de reempaque es accesible únicamente para person
 Riberalta;Reempaque;¿El área de reempaque está limpia?;Demasiada rotura acumulada;Pendiente
 Cobija;Estiba;¿Todos los pallets están en las áreas demarcadas?;Demarcar el area de paletas;Pendiente
 Yacuiba;Estiba;¿Los productos están limpios, sin presencia de polvo?;Reforzar el cierre de bodega cuando no se tenga ciruclación de montacargas ;Pendiente
-El Alto;Picking;¿Los pallets de madera están en buenas condiciones (sin roturas) en el Picking?;Seguimos en el pla de separar las paletas de madera ;0
+El Alto;Picking;¿Los pallets de madera están en buenas condiciones (sin roturas) en el Picking?;Seguimos en el pla de separar las paletas de madera ;Pendiente
+Yacuiba;Picking;¿El piso del área de Picking está limpio y sin basura?;Realizar la limpieza del picking y que quede libre de film strech vacío;Pendiente
+Yacuiba;Reempaque;¿El área de reempaque está limpia?;REalizar 5s en zona de reempaque, sacando las unidades pinchadas;Pendiente

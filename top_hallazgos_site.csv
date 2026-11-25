@@ -59,5 +59,15 @@ Riberalta;Estiba;¿Todos los pallets están en las áreas demarcadas?;1
 Yacuiba;Estiba;¿El piso del almacén está limpio y sin basura?;2
 Yacuiba;Reempaque;¿Los productos están organizados en las áreas demarcadas?;1
 Yacuiba;Estiba;¿Los pallets estan identificados (SKU, Fecha de vencimiento, lote, etc)?;1
-Montero;Picking;¿Los productos están limpios, sin presencia de polvo?;3
 Montero;Picking;¿Los pallets están libres de fugas, botellas rotas, microperforaciones o productos dañados?;2
+El Alto;Estiba;¿El piso del almacén está limpio y sin basura?;1
+Montero;Estiba;¿Los pallets están libres de fugas, botellas rotas, microperforaciones o productos dañados?;1
+Tarija;Picking;¿Los productos están limpios, sin presencia de polvo?;1
+Tarija;Estiba;¿Todos los pallets están alineados y sin inclinación?;1
+Tarija;Reempaque;¿El área de reempaque está libre de plagas y mosquitos?;1
+Riberalta;Reempaque;¿El área de reempaque es accesible únicamente para personal autorizado?;1
+Riberalta;Reempaque;¿El área de reempaque está limpia?;1
+Yacuiba;Estiba;¿Los productos están limpios, sin presencia de polvo?;1
+El Alto;Picking;¿Los pallets de madera están en buenas condiciones (sin roturas) en el Picking?;1
+Yacuiba;Picking;¿El piso del área de Picking está limpio y sin basura?;1
+Yacuiba;Reempaque;¿El área de reempaque está limpia?;1
